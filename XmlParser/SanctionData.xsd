@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sanctionsData" type="enh:sanctionsDataType" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+  <xs:complexType name="sanctionsListType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId" use="optional"/>
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+        <xs:attribute type="xs:string" name="datePublished" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="sanctionsListsType">
+    <xs:sequence>
+      <xs:element type="enh:sanctionsListType" name="sanctionsList" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtersType">
+    <xs:sequence>
+      <xs:element type="enh:sanctionsListsType" name="sanctionsLists" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="publicationInfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="dataAsOf"/>
+      <xs:element type="enh:filtersType" name="filters" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="referenceValueType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="type"/>
+      <xs:element type="xs:string" name="value"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="refId"/>
+  </xs:complexType>
+  <xs:complexType name="referenceValuesType">
+    <xs:sequence>
+      <xs:element type="enh:referenceValueType" name="referenceValue" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detailTypeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="featureTypeType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="type"/>
+      <xs:element type="enh:detailTypeType" name="detailType" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="xs:string" name="publishExclude"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="featureTypeId"/>
+  </xs:complexType>
+  <xs:complexType name="featureTypesType">
+    <xs:sequence>
+      <xs:element type="enh:featureTypeType" name="featureType" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entityTypeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="generalInfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="identityId"/>
+      <xs:element type="enh:entityTypeType" name="entityType" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sanctionsProgramType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="sanctionsProgramsType">
+    <xs:sequence>
+      <xs:element type="enh:sanctionsProgramType" name="sanctionsProgram" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sanctionsTypeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="sanctionsTypesType">
+    <xs:sequence>
+      <xs:element type="enh:sanctionsTypeType" name="sanctionsType" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="legalAuthorityType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="legalAuthoritiesType">
+    <xs:sequence>
+      <xs:element type="enh:legalAuthorityType" name="legalAuthority" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scriptType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="typeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId" use="optional"/>
+        <xs:attribute type="xs:string" name="featureTypeId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="namePartType">
+    <xs:sequence>
+      <xs:element type="enh:typeType" name="type" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="SANCHEZ"/>
+            <xs:enumeration value="CARLON"/>
+            <xs:enumeration value="Diana"/>
+            <xs:enumeration value="Maria"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="namePartsType">
+    <xs:sequence>
+      <xs:element type="enh:namePartType" name="namePart" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="translationType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="isPrimary"/>
+      <xs:element type="enh:scriptType" name="script" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="xs:string" name="formattedFirstName" minOccurs="0"/>
+      <xs:element type="xs:string" name="formattedLastName" minOccurs="0"/>
+      <xs:element type="xs:string" name="formattedFullName" minOccurs="0"/>
+      <xs:element type="enh:namePartsType" name="nameParts" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:addressPartsType" name="addressParts" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="translationsType">
+    <xs:sequence>
+      <xs:element type="enh:translationType" name="translation" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nameType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="isPrimary" minOccurs="0"/>
+      <xs:element type="xs:string" name="isLowQuality" minOccurs="0"/>
+      <xs:element type="enh:translationsType" name="translations" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="nameId" use="optional"/>
+    <xs:attribute type="xs:string" name="nameTranslationId" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="namesType">
+    <xs:sequence>
+      <xs:element type="enh:nameType" name="name" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countryType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="addressPartType">
+    <xs:sequence>
+      <xs:element type="enh:typeType" name="type" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Calle Ricardo Palma 2814"/>
+            <xs:enumeration value="Colonia Prados Providencia"/>
+            <xs:enumeration value="Guadalajara"/>
+            <xs:enumeration value="Jalisco"/>
+            <xs:enumeration value="Calle 12 de Diciembre #480"/>
+            <xs:enumeration value="Colonia Chapalita"/>
+            <xs:enumeration value="Zapopan"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="addressPartsType">
+    <xs:sequence>
+      <xs:element type="enh:addressPartType" name="addressPart" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element type="enh:countryType" name="country" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:translationsType" name="translations" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="addressesType">
+    <xs:sequence>
+      <xs:element type="enh:addressType" name="address" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reliabilityType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="featureType">
+    <xs:sequence>
+      <xs:element type="enh:typeType" name="type" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element name="versionId">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="14979"/>
+            <xs:enumeration value="14980"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Ahome, Sinaloa, Mexico"/>
+            <xs:enumeration value="11 Feb 1979"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="enh:valueDateType" name="valueDate" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="xs:string" name="isPrimary"/>
+      <xs:element type="enh:reliabilityType" name="reliability" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="valueDateType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="fromDateBegin"/>
+      <xs:element type="xs:string" name="fromDateEnd"/>
+      <xs:element type="xs:string" name="toDateBegin"/>
+      <xs:element type="xs:string" name="toDateEnd"/>
+      <xs:element type="xs:string" name="isApproximate"/>
+      <xs:element type="xs:string" name="isDateRange"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="featuresType">
+    <xs:sequence>
+      <xs:element type="enh:featureType" name="feature" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issuingCountryType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="refId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="identityDocumentType">
+    <xs:sequence>
+      <xs:element type="enh:typeType" name="type" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:nameType" name="name" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element name="documentNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="SACD790211MSLNRN04"/>
+            <xs:enumeration value="SACD-790211-KC2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="isValid"/>
+      <xs:element type="enh:issueDateType" name="issueDate" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:expirationDateType" name="expirationDate" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:issuingCountryType" name="issuingCountry" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="issueDateType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="fromDateBegin"/>
+      <xs:element type="xs:string" name="fromDateEnd"/>
+      <xs:element type="xs:string" name="toDateBegin"/>
+      <xs:element type="xs:string" name="toDateEnd"/>
+      <xs:element type="xs:string" name="isApproximate"/>
+      <xs:element type="xs:string" name="isDateRange"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="expirationDateType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="fromDateBegin"/>
+      <xs:element type="xs:string" name="fromDateEnd"/>
+      <xs:element type="xs:string" name="toDateBegin"/>
+      <xs:element type="xs:string" name="toDateEnd"/>
+      <xs:element type="xs:string" name="isApproximate"/>
+      <xs:element type="xs:string" name="isDateRange"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="identityDocumentsType">
+    <xs:sequence>
+      <xs:element type="enh:identityDocumentType" name="identityDocument" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="relatedEntityType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="entityId" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="relationshipType">
+    <xs:sequence>
+      <xs:element type="enh:typeType" name="type" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:relatedEntityType" name="relatedEntity" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="relationshipsType">
+    <xs:sequence>
+      <xs:element type="enh:relationshipType" name="relationship" maxOccurs="unbounded" minOccurs="0" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entityType">
+    <xs:sequence>
+      <xs:element type="enh:generalInfoType" name="generalInfo" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:sanctionsListsType" name="sanctionsLists" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:sanctionsProgramsType" name="sanctionsPrograms" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:sanctionsTypesType" name="sanctionsTypes" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:legalAuthoritiesType" name="legalAuthorities" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:namesType" name="names" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:addressesType" name="addresses" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:featuresType" name="features" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:identityDocumentsType" name="identityDocuments" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:relationshipsType" name="relationships" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="entitiesType">
+    <xs:sequence>
+      <xs:element type="enh:entityType" name="entity" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sanctionsDataType">
+    <xs:sequence>
+      <xs:element type="enh:publicationInfoType" name="publicationInfo" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:referenceValuesType" name="referenceValues" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:featureTypesType" name="featureTypes" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+      <xs:element type="enh:entitiesType" name="entities" xmlns:enh="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
