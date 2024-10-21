@@ -12,3 +12,4 @@
 /Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.pdb
 /Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.genruntimeconfig.cache
 /Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/ref/XmlParser.dll
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.sourcelink.json

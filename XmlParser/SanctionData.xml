@@ -1,0 +1,209 @@
+<sanctionsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML.xsd" xmlns="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML">
+    <publicationInfo>
+        <dataAsOf>2024-10-17T00:00:00</dataAsOf>
+        <filters>
+            <sanctionsLists>
+                <sanctionsList refId="1550">SDN List</sanctionsList>
+            </sanctionsLists>
+        </filters>
+    </publicationInfo>
+    <referenceValues>
+        <referenceValue refId="91473">
+            <type>Additional Sanctions Information -</type>
+            <value>Subject to Secondary Sanctions</value>
+        </referenceValue>
+    </referenceValues>
+    <featureTypes>
+        <featureType featureTypeId="125">
+            <type>Additional Sanctions Information -</type>
+            <detailType refId="1431">LOOKUP</detailType>
+            <publishExclude>false</publishExclude>
+        </featureType>
+    </featureTypes>
+    <entities>
+        <entity id="18097">
+            <generalInfo>
+                <identityId>9821</identityId>
+                <entityType refId="600">Individual</entityType>
+            </generalInfo>
+            <sanctionsLists>
+                <sanctionsList refId="1550" id="29136" datePublished="2015-08-19">SDN List</sanctionsList>
+            </sanctionsLists>
+            <sanctionsPrograms>
+                <sanctionsProgram refId="203" id="18931">SDNTK</sanctionsProgram>
+            </sanctionsPrograms>
+            <sanctionsTypes>
+                <sanctionsType refId="1705" id="10015">Block</sanctionsType>
+            </sanctionsTypes>
+            <legalAuthorities>
+                <legalAuthority refId="1849" id="5203">Foreign Narcotics Kingpin Designation Act</legalAuthority>
+            </legalAuthorities>
+            <names>
+                <name id="27926">
+                    <isPrimary>true</isPrimary>
+                    <isLowQuality>false</isLowQuality>
+                    <translations>
+                        <translation id="21213">
+                            <isPrimary>true</isPrimary>
+                            <script refId="20122">Latin</script>
+                            <formattedFirstName>Diana Maria</formattedFirstName>
+                            <formattedLastName>SANCHEZ CARLON</formattedLastName>
+                            <formattedFullName>SANCHEZ CARLON, Diana Maria</formattedFullName>
+                            <nameParts>
+                                <namePart id="39593">
+                                    <type refId="91708">Patronymic</type>
+                                    <value>SANCHEZ</value>
+                                </namePart>
+                                <namePart id="39594">
+                                    <type refId="91709">Matronymic</type>
+                                    <value>CARLON</value>
+                                </namePart>
+                                <namePart id="39595">
+                                    <type refId="1521">First Name</type>
+                                    <value>Diana</value>
+                                </namePart>
+                                <namePart id="39596">
+                                    <type refId="1522">Middle Name</type>
+                                    <value>Maria</value>
+                                </namePart>
+                            </nameParts>
+                        </translation>
+                    </translations>
+                </name>
+            </names>
+            <addresses>
+                <address id="27353">
+                    <country refId="11143">Mexico</country>
+                    <translations>
+                        <translation id="27062">
+                            <isPrimary>true</isPrimary>
+                            <script refId="20122">Latin</script>
+                            <addressParts>
+                                <addressPart id="36496">
+                                    <type refId="1451">ADDRESS1</type>
+                                    <value>Calle Ricardo Palma 2814</value>
+                                </addressPart>
+                                <addressPart id="36497">
+                                    <type refId="1452">ADDRESS2</type>
+                                    <value>Colonia Prados Providencia</value>
+                                </addressPart>
+                                <addressPart id="36498">
+                                    <type refId="1454">CITY</type>
+                                    <value>Guadalajara</value>
+                                </addressPart>
+                                <addressPart id="36499">
+                                    <type refId="1455">STATE/PROVINCE</type>
+                                    <value>Jalisco</value>
+                                </addressPart>
+                            </addressParts>
+                        </translation>
+                    </translations>
+                </address>
+                <address id="29774">
+                    <country refId="11143">Mexico</country>
+                    <translations>
+                        <translation id="28632">
+                            <isPrimary>true</isPrimary>
+                            <script refId="20122">Latin</script>
+                            <addressParts>
+                                <addressPart id="39945">
+                                    <type refId="1451">ADDRESS1</type>
+                                    <value>Calle 12 de Diciembre #480</value>
+                                </addressPart>
+                                <addressPart id="39946">
+                                    <type refId="1452">ADDRESS2</type>
+                                    <value>Colonia Chapalita</value>
+                                </addressPart>
+                                <addressPart id="39947">
+                                    <type refId="1454">CITY</type>
+                                    <value>Zapopan</value>
+                                </addressPart>
+                                <addressPart id="39948">
+                                    <type refId="1455">STATE/PROVINCE</type>
+                                    <value>Jalisco</value>
+                                </addressPart>
+                            </addressParts>
+                        </translation>
+                    </translations>
+                </address>
+            </addresses>
+            <features>
+                <feature id="17240">
+                    <type featureTypeId="9">Place of Birth</type>
+                    <versionId>14979</versionId>
+                    <value>Ahome, Sinaloa, Mexico</value>
+                    <isPrimary>true</isPrimary>
+                    <reliability refId="1560">Confirmed</reliability>
+                </feature>
+                <feature id="17241">
+                    <type featureTypeId="8">Birthdate</type>
+                    <versionId>14980</versionId>
+                    <value>11 Feb 1979</value>
+                    <valueDate id="15482">
+                        <fromDateBegin>1979-02-11</fromDateBegin>
+                        <fromDateEnd>1979-02-11</fromDateEnd>
+                        <toDateBegin>1979-02-11</toDateBegin>
+                        <toDateEnd>1979-02-11</toDateEnd>
+                        <isApproximate>false</isApproximate>
+                        <isDateRange>false</isDateRange>
+                    </valueDate>
+                    <isPrimary>true</isPrimary>
+                </feature>
+            </features>
+            <identityDocuments>
+                <identityDocument id="10332">
+                    <type refId="1600">C.U.R.P.</type>
+                    <name nameId="27926" nameTranslationId="21213">SANCHEZ CARLON, Diana Maria</name>
+                    <documentNumber>SACD790211MSLNRN04</documentNumber>
+                    <isValid>true</isValid>
+                    <issuingCountry refId="11143">Mexico</issuingCountry>
+                </identityDocument>
+                <identityDocument id="10333">
+                    <type refId="1573">R.F.C.</type>
+                    <name nameId="27926" nameTranslationId="21213">SANCHEZ CARLON, Diana Maria</name>
+                    <documentNumber>SACD-790211-KC2</documentNumber>
+                    <isValid>true</isValid>
+                    <issuingCountry refId="11143">Mexico</issuingCountry>
+                </identityDocument>
+            </identityDocuments>
+            <relationships>
+                <relationship id="2087">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18087">AG &amp; CARLON, S.A. DE C.V.</relatedEntity>
+                </relationship>
+                <relationship id="2088">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18093">AHOME REAL ESTATE, S.A. DE C.V.</relatedEntity>
+                </relationship>
+                <relationship id="2089">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18090">GRUPO DIJEMA, S.A. DE C.V.</relatedEntity>
+                </relationship>
+                <relationship id="2090">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18089">CONSULTORIA INTEGRAL LA FUENTE, SOCIEDAD CIVIL</relatedEntity>
+                </relationship>
+                <relationship id="2777">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18821">AGRICOLA BOREAL S.P.R. DE R.L.</relatedEntity>
+                </relationship>
+                <relationship id="2778">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18822">AGRICOLA TAVO S.P.R. DE R.L.</relatedEntity>
+                </relationship>
+                <relationship id="2779">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18824">DESARROLLO AGRICOLA ORGANICO S.P.R. DE R.L.</relatedEntity>
+                </relationship>
+                <relationship id="2780">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18825">DESARROLLO AGRICOLA VERDE DE SAYULA S.P.R. DE R.L.</relatedEntity>
+                </relationship>
+                <relationship id="2781">
+                    <type refId="15003">Owned or Controlled By</type>
+                    <relatedEntity entityId="18826">STEP LATINAMEDICA S.A. DE C.V.</relatedEntity>
+                </relationship>
+            </relationships>
+        </entity>
+    </entities>
+</sanctionsData>
