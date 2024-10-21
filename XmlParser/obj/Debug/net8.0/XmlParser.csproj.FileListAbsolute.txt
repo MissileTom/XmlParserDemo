@@ -1,0 +1,14 @@
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/bin/Debug/net8.0/XmlParser
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/bin/Debug/net8.0/XmlParser.deps.json
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/bin/Debug/net8.0/XmlParser.runtimeconfig.json
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/bin/Debug/net8.0/XmlParser.dll
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/bin/Debug/net8.0/XmlParser.pdb
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.GeneratedMSBuildEditorConfig.editorconfig
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.AssemblyInfoInputs.cache
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.AssemblyInfo.cs
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.csproj.CoreCompileInputs.cache
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.dll
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/refint/XmlParser.dll
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.pdb
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/XmlParser.genruntimeconfig.cache
+/Users/TomBarrett/RiderProjects/XmlParser/XmlParser/obj/Debug/net8.0/ref/XmlParser.dll

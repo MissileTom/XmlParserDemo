@@ -1,0 +1,422 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ENHANCED_XML" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="sanctionsData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="publicationInfo">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:dateTime" name="dataAsOf"/>
+                            <xs:element name="filters">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="sanctionsLists">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sanctionsList">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="referenceValues">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="referenceValue">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="type"/>
+                                        <xs:element type="xs:string" name="value"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:int" name="refId"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="featureTypes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="featureType">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="type"/>
+                                        <xs:element name="detailType">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute type="xs:short" name="refId"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="publishExclude"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="featureTypeId"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="entities">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="entity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="generalInfo">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:short" name="identityId"/>
+                                                    <xs:element name="entityType">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="sanctionsLists">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sanctionsList">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                    <xs:attribute type="xs:short" name="id"/>
+                                                                    <xs:attribute type="xs:date" name="datePublished"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="sanctionsPrograms">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sanctionsProgram">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                    <xs:attribute type="xs:short" name="id"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="sanctionsTypes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="sanctionsType">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                    <xs:attribute type="xs:short" name="id"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="legalAuthorities">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="legalAuthority">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:short" name="refId"/>
+                                                                    <xs:attribute type="xs:short" name="id"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="names">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="name">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="isPrimary"/>
+                                                                <xs:element type="xs:string" name="isLowQuality"/>
+                                                                <xs:element name="translations">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="translation">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:string" name="isPrimary"/>
+                                                                                        <xs:element name="script">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:short" name="refId"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element type="xs:string" name="formattedFirstName"/>
+                                                                                        <xs:element type="xs:string" name="formattedLastName"/>
+                                                                                        <xs:element type="xs:string" name="formattedFullName"/>
+                                                                                        <xs:element name="nameParts">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="namePart" maxOccurs="unbounded" minOccurs="0">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element name="type">
+                                                                                                                    <xs:complexType>
+                                                                                                                        <xs:simpleContent>
+                                                                                                                            <xs:extension base="xs:string">
+                                                                                                                                <xs:attribute type="xs:int" name="refId" use="optional"/>
+                                                                                                                            </xs:extension>
+                                                                                                                        </xs:simpleContent>
+                                                                                                                    </xs:complexType>
+                                                                                                                </xs:element>
+                                                                                                                <xs:element type="xs:string" name="value"/>
+                                                                                                            </xs:sequence>
+                                                                                                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute type="xs:short" name="id"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="addresses">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="address" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="country">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="translations">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="translation">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:string" name="isPrimary"/>
+                                                                                        <xs:element name="script">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element name="addressParts">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="addressPart" maxOccurs="unbounded" minOccurs="0">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element name="type">
+                                                                                                                    <xs:complexType>
+                                                                                                                        <xs:simpleContent>
+                                                                                                                            <xs:extension base="xs:string">
+                                                                                                                                <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                                                                            </xs:extension>
+                                                                                                                        </xs:simpleContent>
+                                                                                                                    </xs:complexType>
+                                                                                                                </xs:element>
+                                                                                                                <xs:element type="xs:string" name="value"/>
+                                                                                                            </xs:sequence>
+                                                                                                            <xs:attribute type="xs:int" name="id" use="optional"/>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="features">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="feature" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="type">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:byte" name="featureTypeId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element type="xs:short" name="versionId"/>
+                                                                <xs:element type="xs:string" name="value"/>
+                                                                <xs:element name="valueDate" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:date" name="fromDateBegin"/>
+                                                                            <xs:element type="xs:date" name="fromDateEnd"/>
+                                                                            <xs:element type="xs:date" name="toDateBegin"/>
+                                                                            <xs:element type="xs:date" name="toDateEnd"/>
+                                                                            <xs:element type="xs:string" name="isApproximate"/>
+                                                                            <xs:element type="xs:string" name="isDateRange"/>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute type="xs:short" name="id"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element type="xs:string" name="isPrimary"/>
+                                                                <xs:element name="reliability" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="refId"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="identityDocuments">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="identityDocument" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="type">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="name">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="nameId" use="optional"/>
+                                                                                <xs:attribute type="xs:short" name="nameTranslationId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element type="xs:string" name="documentNumber"/>
+                                                                <xs:element type="xs:string" name="isValid"/>
+                                                                <xs:element name="issuingCountry">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="relationships">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="relationship" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="type">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="refId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="relatedEntity">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:short" name="entityId" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="id"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
