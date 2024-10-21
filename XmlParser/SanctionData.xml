@@ -163,6 +163,22 @@
                     <name nameId="27926" nameTranslationId="21213">SANCHEZ CARLON, Diana Maria</name>
                     <documentNumber>SACD-790211-KC2</documentNumber>
                     <isValid>true</isValid>
+                    <issueDate id="3342">
+                        <fromDateBegin>2006-09-08</fromDateBegin>
+                        <fromDateEnd>2006-09-08</fromDateEnd>
+                        <toDateBegin>2006-09-08</toDateBegin>
+                        <toDateEnd>2006-09-08</toDateEnd>
+                        <isApproximate>false</isApproximate>
+                        <isDateRange>false</isDateRange>
+                    </issueDate>
+                    <expirationDate id="3343">
+                        <fromDateBegin>2011-07-17</fromDateBegin>
+                        <fromDateEnd>2011-07-17</fromDateEnd>
+                        <toDateBegin>2011-07-17</toDateBegin>
+                        <toDateEnd>2011-07-17</toDateEnd>
+                        <isApproximate>false</isApproximate>
+                        <isDateRange>false</isDateRange>
+                    </expirationDate>
                     <issuingCountry refId="11143">Mexico</issuingCountry>
                 </identityDocument>
             </identityDocuments>
